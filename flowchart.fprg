@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-11-06 12:30:01 PM"/>
+        <attribute name="created" value="VXNlcjtMQVBUT1AtSTVLRE9NUEo7MjAyMC0xMS0wNjsxMTo0NjoyNyBBTTsyNzY1"/>
+        <attribute name="edited" value="VXNlcjtMQVBUT1AtSTVLRE9NUEo7MjAyMC0xMS0wNjsxMjozMDowMSBQTTsxOzI4NzQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="data" type="Integer" array="True" size="5"/>
+            <declare name="i, j, k, swap" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;masukan bilangab ke-&quot; &amp; i + 1" newline="True"/>
+                <input variable="data[i]"/>
+            </for>
+            <output expression="&quot;Data awal: &quot; &amp; data[0] &amp; &quot;,&quot;&amp; data[1] &amp; &quot;,&quot;&amp; data[2] &amp; &quot;,&quot;&amp; data[3] &amp; &quot;,&quot;&amp; data[4]" newline="True"/>
+            <for variable="j" start="0" end="3" direction="inc" step="1">
+                <for variable="k" start="j+1" end="4" direction="inc" step="1">
+                    <if expression="data[j] &gt; data[k]">
+                        <then>
+                            <assign variable="swap" expression="data[j]"/>
+                            <assign variable="data[j]" expression="data[k]"/>
+                            <assign variable="data[k]" expression="swap"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot;Data akhir: &quot; &amp; data[0] &amp; &quot;,&quot;&amp; data[1] &amp; &quot;,&quot;&amp; data[2] &amp; &quot;,&quot;&amp; data[3] &amp; &quot;,&quot;&amp; data[4]" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
